@@ -179,7 +179,7 @@
       .hamburger {
         display: none;
         cursor: pointer;
-        margin-right: 15px;
+        margin-right: 25px;
       }
 
       /* Hero Section */
@@ -1021,17 +1021,24 @@
         background: #3a3a3a;
       }
 
-      /* Mobile Menu Dark Mode */
-      @media (max-width: 768px) {
-        .dark-mode-toggle span {
-          display: none;
-        }
-
-        .dark-mode-toggle {
-          margin-left: 20px;
-          font-size: 24px;
-        }
-      }
+     /* Add this to your existing dark mode CSS */
+@media (max-width: 768px) {
+  body.dark-mode .nav-links {
+    background: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark-mode .nav-links a {
+    color: var(--dark-color) !important;
+  }
+  
+  body.dark-mode .nav-links a:hover {
+    color: var(--primary-color) !important;
+  }
+  
+  body.dark-mode .hamburger {
+    color: var(--dark-color);
+  }}
     </style>
   </head>
   <body>
